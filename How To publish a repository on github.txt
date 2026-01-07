@@ -1,0 +1,5 @@
+crea il repo vuoto su github
+
+dalla cartella del repository
+
+% git remote add origin git@github.com:paolobertani/<<nome del repository>>.git

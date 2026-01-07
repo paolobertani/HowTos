@@ -1,0 +1,23 @@
+# Format the destination volume and make it a bootable installer. Works with 10.9 / 10.10 / 10.11 / 10.12 / 10.13
+# Ensure the path points to the installer application "createinstallmedia" tool
+
+sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --applicationpath Install\ macOS\ High\ Sierra.app --volume /Volumes/MyVolume
+
+
+# To prevent High Sierra installer to convert destination volume to APFS format
+# 1) Boot from the Installer
+# 2) Open the Terminal from the Utility menu
+# 3) Then launch the installer manually:
+
+cd /Volumes
+
+# Find the Volume with the full installer
+sudo Install\ macOS\ High\ Sierra.app/Contents/Resources/startosinstall  --converttoapfs NO
+
+###
+
+# Other options to launch the Installer with
+sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/startosinstall --applicationpath /Applications/Install\ macOS\ High\ Sierra.app --agreetolicense --converttoapfs NO --nointeraction
+
+# See available options
+sudo Install\ macOS\ High\ Sierra.app/Contents/Resources/startosinstall --usage

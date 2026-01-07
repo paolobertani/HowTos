@@ -1,0 +1,12 @@
+create a text file named vidlist.txt in the following format:
+
+file '/path/to/clip1'
+file '/path/to/clip2'
+file '/path/to/clip3'
+Note that these can be either relative or absolute paths.
+
+Then issue the command:
+
+ffmpeg -f concat -safe 0 -i vidlist.txt -c copy output
+
+In case it's not abundantly clear, replace output with the video filename you wish to produce (whether that be output.mp4, output.mkv, output.avi) ffmpeg will utilize the container indicated by the extension.

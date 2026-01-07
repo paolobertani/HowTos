@@ -1,0 +1,3 @@
+softwareupdate --ignore "macOS Catalina"
+
+sudo softwareupdate --reset-ignored

@@ -1,0 +1,15 @@
+ogg / ogv
+
+ffmpeg -i inputfile.mp4 -acodec libvorbis -vcodec libtheora -qscale:v 3 -qscale:a 3 -f ogv outputfile.ogv
+
+---
+
+WEBM
+
+Handbrake: MKV Video: vp8 cq 50 SLOW, Audio: Vorbis 160kbps
+
+---
+
+mp4
+
+Handbrake: RF27

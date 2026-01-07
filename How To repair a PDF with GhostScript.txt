@@ -1,0 +1,6 @@
+gs \
+  -o repaired.pdf \
+  -sDEVICE=pdfwrite \
+  -dPDFSETTINGS=/default \
+   corrupted.pdf
+

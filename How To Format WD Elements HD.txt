@@ -1,0 +1,7 @@
+diskutil list
+
+diskutil unmountDisk force disk...
+
+sudo dd if=/dev/zero of=/dev/disk... bs=1024 count=1024
+
+diskutil partitionDisk disk... GPT JHFS+ "WDElements" 0g
