@@ -1,5 +1,7 @@
-crea il repo vuoto su github
+create a new empty repository on GitHub
 
-dalla cartella del repository
+on the terminal move to the repository local directory;
+cd /pat/to/local-repository
 
-% git remote add origin git@github.com:paolobertani/<<nome del repository>>.git
+then:
+git remote add origin git@github.com:paolobertani/<<name-of-the-repository>>.git

@@ -927,3 +927,34 @@ sudo make install
 make -j 10
 sudo make install
 ```
+
+-
+
+### Python 3.13
+
+Re-set env. vars:
+
+```
+export KERNEL_BITS=64
+
+export MACOSX_DEPLOYMENT_TARGET=15.7
+export CFLAGS="-arch arm64 -g -pipe -no-cpp-precomp -O3 -fno-common"
+export CCFLAGS="-arch arm64 -g -Os -pipe -O3"
+export CXXFLAGS="-arch arm64 -g -Os -pipe -O3 -fno-common"
+export LDFLAGS="-arch arm64 -bind_at_load -L/usr/local/openssl/lib -L/usr/local/lib"
+```
+
+Then:
+
+```
+./configure \
+  --prefix=/usr/local \
+  --enable-optimizations \
+  --with-openssl=/usr/local \
+  --with-openssl-rpath=auto
+
+make -j 10
+
+sudo make install
+```
+
